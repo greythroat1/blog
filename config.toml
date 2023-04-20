@@ -2,7 +2,7 @@ baseURL = "https://greythroat1.github.io/blog/"
 languageCode = "en-us"
 canonifyurls = true
 title = "GreyThroat"
-theme= "archie"
+theme = "archie"
 copyright = "© GreyThroat"
 
 # Code Highlight
@@ -13,11 +13,12 @@ pygmentscodefencesguesssyntax = true
 #disqusShortname = "yourDisqusShortname"
 
 #Page Look
-paginate=4 # articles per page
+paginate = 4 # articles per page
 
 [params]
-	mode="toggle" # color-mode → light,dark,toggle or auto
-	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
+	mode = "toggle" # color-mode → light,dark,toggle or auto
+	favicon = "favicon.ico"
+	useCDN = false # don't use CDNs for fonts and icons, instead serve them locally.
 	subtitle = "Mining Engineering Guy"
 	#mathjax = true # enable MathJax support
 	#katex = true # enable KaTeX support
