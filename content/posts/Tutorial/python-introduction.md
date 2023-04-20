@@ -2,7 +2,7 @@
 title: "Python Introduction"
 date: 2022-08-24T00:42:08+07:00
 description: "Mengenal tentang bahasa pemograman python."
-tags: ["python", "tutorial"]
+tags: ["python"]
 ---
 
 
@@ -71,8 +71,7 @@ Nah, untuk menggunakan `python`, anda memerlukan Text Editor atau IDE (Integrate
 
 5. [Spyder](https://www.spyder-ide.org/)
 
-6. [Vim](https://www.vim.org/) atau [Neovim](https://neovim.io/) (jika anda ingin dikatakan sebagai pro)  
-
+6. [Vim](https://www.vim.org/) atau [Neovim](https://neovim.io/)  
 
 
 *Jika menggunakan Anaconda, anda tidak perlu lagi mengunduh Text Editor atau IDE lainnya dikarenakan Anaconda sudah mem-bundle Jupyter dan Spyder.*

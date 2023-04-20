@@ -1,7 +1,7 @@
 ---
 title: "Python Basic 8: Data Structures"
 date: 2022-09-07T01:35:24+07:00
-description: "Mengenal Data structures (list, tuple, set, dan dictionary) pada python"
+description: "Mengenal Data structures (list, tuple, set, dan dictionary) pada python."
 tags: ["python", "tutorial"]
 katex: false
 ---
@@ -14,7 +14,7 @@ Masing-masing memiliki karakteristiknya sendiri. Berikut merupakan karakteristik
 
 | Data Structures | Ordered or Not? | Mutable or Immutable? | Can Have Duplicates or Not? | Symbol |
 |-----------------|-----------------|-----------------------|-------------------------|------------|
-| List | Ordered | Mutable (Changeable) | Yes | [] |
+| List | Ordered | Mutable (Changeable) | Yes | [ ] |
 | Tuple | Ordered | Immutable (Unchangeable) | Yes | ( ) |
 | Set  | Unordered | Immutable, but Addable and Removable | No | { } |
 | Dictionary | Unordered | Mutable (Changeable) | No | { } |  

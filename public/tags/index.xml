@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Liquid Nitrogen</title>
-    <link>https://liquidnitrogen.github.io/tags/</link>
-    <description>Recent content in Tags on Liquid Nitrogen</description>
+    <title>Tags on GreyThroat</title>
+    <link>https://greythroat1.github.io/blog/tags/</link>
+    <description>Recent content in Tags on GreyThroat</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Liquid Nitrogen</copyright>
-    <lastBuildDate>Wed, 07 Sep 2022 01:35:24 +0700</lastBuildDate><atom:link href="https://liquidnitrogen.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© GreyThroat</copyright>
+    <lastBuildDate>Wed, 07 Sep 2022 01:35:24 +0700</lastBuildDate><atom:link href="https://greythroat1.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>python</title>
-      <link>https://liquidnitrogen.github.io/tags/python/</link>
+      <link>https://greythroat1.github.io/blog/tags/python/</link>
       <pubDate>Wed, 07 Sep 2022 01:35:24 +0700</pubDate>
       
-      <guid>https://liquidnitrogen.github.io/tags/python/</guid>
+      <guid>https://greythroat1.github.io/blog/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tutorial</title>
-      <link>https://liquidnitrogen.github.io/tags/tutorial/</link>
+      <link>https://greythroat1.github.io/blog/tags/tutorial/</link>
       <pubDate>Wed, 07 Sep 2022 01:35:24 +0700</pubDate>
       
-      <guid>https://liquidnitrogen.github.io/tags/tutorial/</guid>
+      <guid>https://greythroat1.github.io/blog/tags/tutorial/</guid>
       <description></description>
     </item>
     

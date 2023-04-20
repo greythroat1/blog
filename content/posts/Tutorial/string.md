@@ -53,7 +53,7 @@ print('''The following options are available:
 
 ## Indexing & Slicing  
 
-Indexing yaitu mengakses tulisan yang ada didalam string. Untuk mengaksesnya bisa menggunakan tanda []. Tanda tersebut bisa digunakan untuk semua jenis data struktur seperti tuple, list, string, dict, dll. Index dimulai dari 0 untuk huruf/angka yang pertama.  
+Indexing yaitu mengakses tulisan yang ada didalam string. Untuk mengaksesnya bisa menggunakan tanda [ ]. Tanda tersebut bisa digunakan untuk semua jenis data struktur seperti tuple, list, string, dict, dll. Index dimulai dari 0 untuk huruf/angka yang pertama.  
 
 ```python
 a = 'Game of programming'

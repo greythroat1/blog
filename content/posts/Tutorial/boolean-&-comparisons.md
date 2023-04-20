@@ -1,7 +1,7 @@
 ---
 title: "Python Basic 2: Boolean & Comparisons"
 date: 2022-08-25T01:28:05+07:00
-description: "Mengenal boolean dan comparisons pada python"
+description: "Mengenal boolean dan comparisons pada python."
 tags: ["python", "tutorial"]
 ---
 

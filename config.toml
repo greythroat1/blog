@@ -1,5 +1,6 @@
-baseURL = ""
+baseURL = "https://greythroat1.github.io/blog/"
 languageCode = "en-us"
+canonifyurls = true
 title = "GreyThroat"
 theme= "archie"
 copyright = "© GreyThroat"
