@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Python Basic 7: String - Liquid Nitrogen</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Mengenal string pada python." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Python Basic 7: String" />
+<meta property="og:description" content="Mengenal string pada python." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://liquidnitrogen.github.io/posts/tutorial/string/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-01T01:35:05+07:00" />
+<meta property="article:modified_time" content="2022-09-01T01:35:05+07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python Basic 7: String"/>
+<meta name="twitter:description" content="Mengenal string pada python."/>
+<script src="https://liquidnitrogen.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://liquidnitrogen.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://liquidnitrogen.github.io/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://liquidnitrogen.github.io/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css"  disabled />
+	
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://liquidnitrogen.github.io/">Liquid Nitrogen</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+		<script src="https://liquidnitrogen.github.io/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Python Basic 7: String</h1>
+			<div class="meta">Posted on Sep 1, 2022</div>
+		</div>
+		
+
+		<section class="body">
+			<p>Semua tulisan yang diapit oleh tanda petik (&rsquo; atau &ldquo;) dikatakan sebagai string. Contoh penulisannya yaitu: &lsquo;kata&rsquo; atau &ldquo;kata&rdquo;, tetapi tidak boleh digabung antara tanda petik 1 dan tanda petik 2 seperti: &lsquo;kata&rdquo;.</p>
+<h2 id="merging-string">Merging String</h2>
+<p>Untuk menggabungkan banyak string, dapat menambahkan tanda tambah (+).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Python is the best language for data science&#34;</span>
+</span></span><span style="display:flex;"><span>t <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Its very easy to write&#39;</span>
+</span></span><span style="display:flex;"><span>print(s<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;and&#39;</span><span style="color:#f92672">+</span>t)
+</span></span><span style="display:flex;"><span>print(s<span style="color:#f92672">+</span><span style="color:#e6db74">&#39; and &#39;</span><span style="color:#f92672">+</span>t)  <span style="color:#75715e"># Ditaruh spasi agar output memiliki spasi diantara dua string</span>
+</span></span></code></pre></div><p>Selain dengan menambahkan dengan tanda tambah (+), dapat juga menggunakan tanda koma (,).</p>
+<p>Penggabungan dengan cara menggunakan tanda tambah (+) hanya bisa dengan data yang berjenis string, jika data tidak berjenis string (con: integer, float, dsb.) maka harus diubah terlebih dahulu menjadi string. Sedangkan jika menggunakan tanda koma (,) maka tidak perlu mengubah kedalam jenis string.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>Harga <span style="color:#f92672">=</span> <span style="color:#ae81ff">12000</span>
+</span></span><span style="display:flex;"><span>p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Harga buku ini&#34;</span>
+</span></span><span style="display:flex;"><span>v <span style="color:#f92672">=</span> p <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; yaitu: &#39;</span><span style="color:#f92672">+</span> str(Harga)  <span style="color:#75715e"># untuk yang selain jenis string, harus diubah dahulu menjadi string agar bisa digabungkan dengan string lain</span>
+</span></span><span style="display:flex;"><span>print(v)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#atau</span>
+</span></span><span style="display:flex;"><span>print(p, <span style="color:#e6db74">&#39;yaitu:&#39;</span>, Harga)  <span style="color:#75715e">#jika ditulis dengan tanda koma, maka tidak perlu spasi tambahan karena sudah terotomatis membuat spasi</span>
+</span></span></code></pre></div><h2 id="multiline-string">Multiline String</h2>
+<p>Yaitu dengan menggunakan 3 tanda petik diawal dan diakhir.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>multiline1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;This is the first line of string,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">and here is the second line,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">and here is the third and final line&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>print(multiline1)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;&#39;&#39;The following options are available:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        -a   : does something
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        -b   : does nothing
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;&#39;&#39;</span>)  
+</span></span></code></pre></div><h2 id="indexing--slicing">Indexing &amp; Slicing</h2>
+<p>Indexing yaitu mengakses tulisan yang ada didalam string. Untuk mengaksesnya bisa menggunakan tanda []. Tanda tersebut bisa digunakan untuk semua jenis data struktur seperti tuple, list, string, dict, dll. Index dimulai dari 0 untuk huruf/angka yang pertama.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Game of programming&#39;</span>
+</span></span><span style="display:flex;"><span>print(a[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>print(a[<span style="color:#ae81ff">3</span>])
+</span></span><span style="display:flex;"><span>print(a[<span style="color:#ae81ff">4</span>])  <span style="color:#75715e"># karena hasil spasi, maka hasil tidak tampak di output  </span>
+</span></span></code></pre></div><p>Index bisa juga diakses dengan jarak tertentu yang dinamakan sebagai slicing. Formatnya: [start:end:step]. Penulisan <em>start</em> dimulai dari 0. <em>end</em> disini tidak sampai pada baris yang ditujukan. Contohnya jika <em>end</em> ditulis pada baris 8, maka hanya akan sampai baris ke-7. <em>step</em> yaitu berapa banyak selang perpindahan huruf.</p>
+<p>Jika hanya memiliki dua komponen, maka hanya akan terbuat <em>start</em> dan <em>end</em> saja.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;How are you and who are you&#34;</span>
+</span></span><span style="display:flex;"><span>print(s[<span style="color:#ae81ff">3</span>:<span style="color:#ae81ff">8</span>])
+</span></span></code></pre></div><p>Selain dengan angka positif, bisa juga melakukan indexing dan slicing dengan angka negatif/minus. Index dengan negatif/minus dimulai dari -1</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;How are you and who are you&#34;</span>
+</span></span><span style="display:flex;"><span>print(s[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>print(s[<span style="color:#f92672">-</span><span style="color:#ae81ff">12</span>:<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>])
+</span></span></code></pre></div><p>Contoh slicing lainnya:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(s[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">12</span>:<span style="color:#ae81ff">2</span>])
+</span></span><span style="display:flex;"><span>print(s[:<span style="color:#ae81ff">12</span>])    <span style="color:#75715e"># dimulai dari awal hingga baris 11</span>
+</span></span><span style="display:flex;"><span>print(s[<span style="color:#ae81ff">3</span>:])     <span style="color:#75715e"># dari baris 4 sampai akhir</span>
+</span></span><span style="display:flex;"><span>print(s[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">12</span>:])  <span style="color:#75715e"># step 1</span>
+</span></span><span style="display:flex;"><span>print(s[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])   <span style="color:#75715e"># tulisan akan menjadi invers</span>
+</span></span></code></pre></div><h2 id="built-in-function-pada-string">Built-in Function pada String</h2>
+<p>Terdapat banyak built-in function pada string. Pada kali ini hanya beberapa saja yang dijelaskan.</p>
+<p>Cara penulisan function ini yaitu diawali dengan cara menuliskan string terlebih dahulu atau memberikan variabel (yang telah merujuk pada string), kemudian diikuti oleh function itu sendiri.</p>
+<h3 id="strip">.strip()</h3>
+<p><strong>.strip()</strong> adalah function untuk menghilangkan spasi diawal dan diakhir</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;     abc def     ghi jklmnop    &#34;</span>
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span>strip()
+</span></span><span style="display:flex;"><span>print(b)
+</span></span></code></pre></div><h3 id="lower-upper--capitalize">.lower(), .upper() &amp; .capitalize()</h3>
+<ul>
+<li><strong>.lower()</strong> adalah function untuk membuat semua huruf menjadi huruf kecil.</li>
+<li><strong>.upper()</strong> adalah function untuk membuat semua huruf menjadi huruf besar.</li>
+<li><strong>.capitalize()</strong> adalah function untuk membuat huruf awal menjadi huruf besar (kapital)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ABC DeFg ;; sadFa qG&#34;</span>
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span>lower()
+</span></span><span style="display:flex;"><span>c <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span>upper()
+</span></span><span style="display:flex;"><span>d <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span>capitalize()
+</span></span><span style="display:flex;"><span>print(b)
+</span></span><span style="display:flex;"><span>print(c)
+</span></span><span style="display:flex;"><span>print(d)
+</span></span></code></pre></div><h3 id="replace">.replace()</h3>
+<p><strong>.replace()</strong> adalah function untuk mengubah suatu tulisan didalam string menjadi tulisan lain.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ABC DeFg ;; sadFa qG&#34;</span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;A&#34;</span>, <span style="color:#e6db74">&#34;#&#34;</span>)
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;;;&#34;</span>, <span style="color:#e6db74">&#34;two semi colons&#34;</span>)
+</span></span><span style="display:flex;"><span>print(x)
+</span></span><span style="display:flex;"><span>print(y)
+</span></span></code></pre></div><h3 id="split">.split()</h3>
+<p><strong>.split()</strong> adalah function untuk memisahkan string. Output akan menjadi List.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>k <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abc;def;ghi;sfsa14&#34;</span>
+</span></span><span style="display:flex;"><span>L <span style="color:#f92672">=</span> k<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;;&#34;</span>)
+</span></span><span style="display:flex;"><span>print (L)
+</span></span></code></pre></div><p>Dikarenakan output menjadi list, maka dapat menerapkan perlakuan-perlakuan terhadap list, contohnya seperti mengaksesnya.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(L[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>print(L[<span style="color:#ae81ff">2</span>])
+</span></span></code></pre></div><h2 id="other-manipulation-with-string">Other Manipulation with String</h2>
+<h3 id="in--not-in">in &amp; not in</h3>
+<p><strong>in</strong> dan <strong>not in</strong> akan mencari apakah suatu tulisan terdapat didalam string tersebut atau tidak. Output akan menghasilkan Boolean (<strong>True</strong> &amp; <strong>False</strong>).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;at&#34;</span> <span style="color:#f92672">in</span> <span style="color:#e6db74">&#34;asfdfatsgk&#34;</span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;at&#34;</span> <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> <span style="color:#e6db74">&#34;asfdsfatgk&#34;</span>)
+</span></span></code></pre></div><h3 id="escape-corrector">Escape Corrector</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;We are learning &#34;</span>string<span style="color:#e6db74">&#34; here&#34;</span>)
+</span></span></code></pre></div><p>Jika ingin hendak menuliskan seperti cara diatas, maka akan menghasilkan error. Oleh karena itu jika ingin memberikan tanda petik didalam string, diberikan <em>escape corrector</em> berupa tanda <strong>garis miring terbalik</strong> atau <strong>backlash ( \ )</strong> agar tidak beradu dengan tanda petik yang mengapit string.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;We are learning </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">string</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> here&#34;</span>)
+</span></span></code></pre></div><p>Selain dengan cara diatas, dapat juga dengan memberikan tanda petik yang berbeda dengan tanda petik yang mengapit string.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;We are learning &#39;string&#39; here&#34;</span>)
+</span></span></code></pre></div><h3 id="new-line">New Line</h3>
+<p>Jika ingin membuat baris baru, maka dapat menggunakan <strong>\n</strong>. Penulisan setelahnya tidak perlu memberikan spasi.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;We are </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> now on another line&#34;</span>)  <span style="color:#75715e"># Jika menggunakan spasi, maka baris baru akan memiliki spasi</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;We are </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">now on another line&#34;</span>)   <span style="color:#75715e"># Baris baru tidak akan memiliki spasi</span>
+</span></span></code></pre></div><p>Khusus pada penulisan path pada Windows, penulisan dengan \n ini akan membuat baris baru kebawah jika penamaan setelah \ memiliki huruf n.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;c:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">ame\drive&#34;</span>)  <span style="color:#75715e"># Output akan menghasilkan baris baru</span>
+</span></span></code></pre></div><p>Untuk menghindarinya, dapat memberikan huruf <strong>r</strong> sebelum penulisan string yang berisi path tersebut.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;c:\name\drive&#34;</span>)
+</span></span></code></pre></div>
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/python">python</a></li>
+					
+					<li><a href="/tags/tutorial">tutorial</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/greythroat1" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="linkedin.com/in/rafli-ahmad-nur-579a03249" rel="me" title="Linkedin"><i data-feather="linkedin"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © Liquid Nitrogen |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

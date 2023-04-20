@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Python Basic 8: Data Structures - Liquid Nitrogen</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Mengenal Data structures (list, tuple, set, dan dictionary) pada python" />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Python Basic 8: Data Structures" />
+<meta property="og:description" content="Mengenal Data structures (list, tuple, set, dan dictionary) pada python" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://liquidnitrogen.github.io/posts/tutorial/data-structures/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-07T01:35:24+07:00" />
+<meta property="article:modified_time" content="2022-09-07T01:35:24+07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python Basic 8: Data Structures"/>
+<meta name="twitter:description" content="Mengenal Data structures (list, tuple, set, dan dictionary) pada python"/>
+<script src="https://liquidnitrogen.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://liquidnitrogen.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://liquidnitrogen.github.io/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://liquidnitrogen.github.io/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css"  disabled />
+	
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://liquidnitrogen.github.io/">Liquid Nitrogen</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+		<script src="https://liquidnitrogen.github.io/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Python Basic 8: Data Structures</h1>
+			<div class="meta">Posted on Sep 7, 2022</div>
+		</div>
+		
+
+		<section class="body">
+			<p>Data structures adalah koleksi atau kumpulan dari banyak data. Data tersebut bersifat heterogen yang berarti dapat berjenis integer, string, float, dsb..</p>
+<p>Terdapat 4 jenis Data structures yang umum yaitu : List, Tuple, Set, dan Dictionary.</p>
+<p>Masing-masing memiliki karakteristiknya sendiri. Berikut merupakan karakteristiknya:</p>
+<table>
+<thead>
+<tr>
+<th>Data Structures</th>
+<th>Ordered or Not?</th>
+<th>Mutable or Immutable?</th>
+<th>Can Have Duplicates or Not?</th>
+<th>Symbol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>List</td>
+<td>Ordered</td>
+<td>Mutable (Changeable)</td>
+<td>Yes</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>Tuple</td>
+<td>Ordered</td>
+<td>Immutable (Unchangeable)</td>
+<td>Yes</td>
+<td>( )</td>
+</tr>
+<tr>
+<td>Set</td>
+<td>Unordered</td>
+<td>Immutable, but Addable and Removable</td>
+<td>No</td>
+<td>{ }</td>
+</tr>
+<tr>
+<td>Dictionary</td>
+<td>Unordered</td>
+<td>Mutable (Changeable)</td>
+<td>No</td>
+<td>{ }</td>
+</tr>
+</tbody>
+</table>
+<p>Ordered yaitu elemen (data) mempunyai posisi yang berarti bisa dilakukan index terhadap elemen didalamnya terhadap posisinya.</p>
+<p>Mutable yaitu data structures element-nya bisa diubah, sedangkan immutable tidak.</p>
+<p>Duplicates yaitu didalam data structures bisa terdapat lebih dari satu element/data yang sama.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>L <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4.9</span>,<span style="color:#e6db74">&#34;name&#34;</span>,<span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span>T <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4.9</span>,<span style="color:#e6db74">&#34;name&#34;</span>,<span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>S <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4.9</span>,<span style="color:#e6db74">&#34;name&#34;</span>,<span style="color:#ae81ff">3</span>}
+</span></span><span style="display:flex;"><span>D <span style="color:#f92672">=</span> {<span style="color:#ae81ff">23</span>:<span style="color:#e6db74">&#34;twothree&#34;</span>,<span style="color:#e6db74">&#39;B&#39;</span>:<span style="color:#ae81ff">43</span>,<span style="color:#e6db74">&#39;C&#39;</span>:<span style="color:#e6db74">&#39;CCD&#39;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;The type of L is:&#34;</span>, type(L))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;The type of T is:&#34;</span>, type(T))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;The type of S is:&#34;</span>, type(S))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;The type of D is:&#34;</span>, type(D))
+</span></span></code></pre></div><h2 id="indexing---duplicates">Indexing  (&amp; Duplicates)</h2>
+<p>Indexing pada List dan Tuple dilakukan dengan menggunakan tanda [ ], yang didalamnya berisi posisi dari yang mau di-index. Posisi dimulai dari 0.</p>
+<p>Pada Set, tidak bisa dilakukan indexing, hanya bisa mencari apakah terdapat element tertentu didalam set atau tidak.</p>
+<p>Pada Dictionary, hanya bisa mengakses value dengan menulis key-nya.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print (L[<span style="color:#ae81ff">1</span>])    <span style="color:#75715e"># index data dengan list</span>
+</span></span><span style="display:flex;"><span>print (T[<span style="color:#ae81ff">1</span>])    <span style="color:#75715e"># index data dengan tuple</span>
+</span></span><span style="display:flex;"><span>print (<span style="color:#ae81ff">3</span> <span style="color:#f92672">in</span> S)  <span style="color:#75715e"># index data dengan set</span>
+</span></span><span style="display:flex;"><span>print (D[<span style="color:#ae81ff">23</span>])   <span style="color:#75715e"># index data dengan dictionary</span>
+</span></span><span style="display:flex;"><span>print (D[<span style="color:#e6db74">&#34;C&#34;</span>])  <span style="color:#75715e"># index data dengan dictionary</span>
+</span></span></code></pre></div><p>Pada set, dua atau lebih element yang sama hanya ditulis sekali</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(L)
+</span></span><span style="display:flex;"><span>print(T)
+</span></span><span style="display:flex;"><span>print(S)
+</span></span></code></pre></div><p>Dapat dilihat pada output bahwa elemen didalam set tidak akan menampilkan elemen yang sama.</p>
+<h3 id="slicing-pada-list-dan-tuple">Slicing pada List dan Tuple</h3>
+<p>Slicing pada list dan tuple sama seperti string. Berikut contohnya:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>L[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">3</span>]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>L[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>T[:<span style="color:#ae81ff">3</span>]
+</span></span></code></pre></div><h2 id="mutable--immutable">Mutable &amp; Immutable</h2>
+<h3 id="list">List</h3>
+<p>Menambahkan elemen kedalam list, contohnya:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>L <span style="color:#f92672">=</span> L <span style="color:#f92672">+</span> [<span style="color:#e6db74">&#34;how&#34;</span>,<span style="color:#e6db74">&#34;are&#34;</span>,<span style="color:#ae81ff">6</span>,<span style="color:#e6db74">&#34;you&#34;</span>]
+</span></span><span style="display:flex;"><span>print(L)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4.9</span>, <span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;how&#39;</span>, <span style="color:#e6db74">&#39;are&#39;</span>, <span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;you&#39;</span>]
+</span></span></code></pre></div></blockquote>
+<p>Bisa juga dengan menuliskan <em>.append</em>. Syntax tersebut hanya bisa untuk menambahkan satu elemen.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>L<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">6.8</span>)
+</span></span><span style="display:flex;"><span>print(L)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4.9</span>, <span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;how&#39;</span>, <span style="color:#e6db74">&#39;are&#39;</span>, <span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;you&#39;</span>, <span style="color:#ae81ff">6.8</span>]
+</span></span></code></pre></div></blockquote>
+<p>Untuk menghapus element, menggunakan <em>del</em> diikuti dengan index.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">del</span> L[<span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span>print (L)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4.9</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;how&#39;</span>, <span style="color:#e6db74">&#39;are&#39;</span>, <span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;you&#39;</span>, <span style="color:#ae81ff">6.8</span>]
+</span></span></code></pre></div></blockquote>
+<p>Bisa juga menghapus list dengan menggunakan <em>del</em> diikuti dengan nama variabel dari list tersebut.</p>
+<h3 id="tuple">Tuple</h3>
+<p>Tuple tidak bisa ditambah atau dihapus elementnya, tetapi bisa digabungkan dua tuple menjadi tuple baru.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>T2 <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#34;A&#34;</span>, <span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#ae81ff">90</span>)
+</span></span><span style="display:flex;"><span>T3 <span style="color:#f92672">=</span> T <span style="color:#f92672">+</span> T2
+</span></span><span style="display:flex;"><span>print(T3)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4.9</span>, <span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#ae81ff">90</span>)
+</span></span></code></pre></div></blockquote>
+<p>Untuk menghapus tuple dengan menggunakan <em>del</em> diikuti dengan nama variabel dari tuple tersebut.</p>
+<h3 id="set">Set</h3>
+<p>Menambahkan satu elemen kedalam set dengan menuliskan <em>.add</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>S<span style="color:#f92672">.</span>add(<span style="color:#ae81ff">56</span>)
+</span></span><span style="display:flex;"><span>print(S)
+</span></span></code></pre></div><blockquote>
+<p>Output (bisa jadi urutan berbeda dikarenakan Set bersifat unordered):</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4.9</span>, <span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#ae81ff">56</span>}
+</span></span></code></pre></div></blockquote>
+<p>Jika ingin menambahkan banyak elemen, dapat menuliskan <em>.update</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>S<span style="color:#f92672">.</span>update({<span style="color:#ae81ff">23</span>,<span style="color:#e6db74">&#34;game&#34;</span>,<span style="color:#ae81ff">3</span>})
+</span></span><span style="display:flex;"><span>print(S)
+</span></span></code></pre></div><blockquote>
+<p>Output (bisa jadi urutan berbeda dikarenakan Set bersifat unordered):</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4.9</span>, <span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#ae81ff">23</span>, <span style="color:#ae81ff">56</span>, <span style="color:#e6db74">&#39;game&#39;</span>}
+</span></span></code></pre></div></blockquote>
+<p>Untuk menghapus elemen bisa menggunakan <em>.remove</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>S<span style="color:#f92672">.</span>remove(<span style="color:#e6db74">&#39;game&#39;</span>)
+</span></span><span style="display:flex;"><span>print(S)
+</span></span></code></pre></div><blockquote>
+<p>Output (bisa jadi urutan berbeda dikarenakan Set bersifat unordered):</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4.9</span>, <span style="color:#ae81ff">23</span>, <span style="color:#ae81ff">56</span>, <span style="color:#e6db74">&#39;name&#39;</span>}
+</span></span></code></pre></div></blockquote>
+<p>Untuk menghapus set dengan menggunakan <em>del</em> diikuti dengan nama variabel dari set tersebut.</p>
+<h3 id="dictionary">Dictionary</h3>
+<p>Menambahkan key dan value kedalam dictionary, berikut contohnya:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>D[<span style="color:#e6db74">&#39;New&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;newValue&#39;</span>
+</span></span><span style="display:flex;"><span>print(D)
+</span></span></code></pre></div><blockquote>
+<p>Outuput:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>{<span style="color:#ae81ff">23</span>: <span style="color:#e6db74">&#39;twothree&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>: <span style="color:#ae81ff">43</span>, <span style="color:#e6db74">&#39;C&#39;</span>: <span style="color:#e6db74">&#39;CCD&#39;</span>, <span style="color:#e6db74">&#39;New&#39;</span>: <span style="color:#e6db74">&#39;newValue&#39;</span>}
+</span></span></code></pre></div></blockquote>
+<p>Untuk menghapus elemen bisa menggunakan <em>del</em> diikuti dengan key-nya.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">del</span> D[<span style="color:#e6db74">&#39;C&#39;</span>]
+</span></span><span style="display:flex;"><span>print(D)
+</span></span></code></pre></div><blockquote>
+<p>Outuput:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>{<span style="color:#ae81ff">23</span>: <span style="color:#e6db74">&#39;twothree&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>: <span style="color:#ae81ff">43</span>, <span style="color:#e6db74">&#39;New&#39;</span>: <span style="color:#e6db74">&#39;newValue&#39;</span>}
+</span></span></code></pre></div></blockquote>
+<p>Jika ingin menggabungkan dua dictionary, bisa menggunakan <em>.update</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>D2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;y&#34;</span>:<span style="color:#e6db74">&#34;Y&#34;</span>, <span style="color:#e6db74">&#34;z&#34;</span>:<span style="color:#ae81ff">10</span>}
+</span></span><span style="display:flex;"><span>D<span style="color:#f92672">.</span>update(D2)
+</span></span><span style="display:flex;"><span>print (D)
+</span></span></code></pre></div><blockquote>
+<p>Outuput:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>{<span style="color:#ae81ff">23</span>: <span style="color:#e6db74">&#39;twothree&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>: <span style="color:#ae81ff">43</span>, <span style="color:#e6db74">&#39;New&#39;</span>: <span style="color:#e6db74">&#39;newValue&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>: <span style="color:#e6db74">&#39;Y&#39;</span>, <span style="color:#e6db74">&#39;z&#39;</span>: <span style="color:#ae81ff">10</span>}
+</span></span></code></pre></div></blockquote>
+<h2 id="copy-of-data-structures">Copy of Data Structures</h2>
+<p>Pada data structures list, set dan dictionary, jika suatu variabel sudah terdapat list, set dan dictionary didalamnya dan kita men-assign variabel tersebut ke variabel lain, maka kita sebenarnya <strong>TIDAK</strong> men-copy list, set dan dictionary tersebut kedalam variabel lain. Variabel baru tersebut hanya merujuk kepada variabel lama.</p>
+<p>Berikut contohnya dengan menggunakan list.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>L <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4.9</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;how&#39;</span>, <span style="color:#e6db74">&#39;are&#39;</span>, <span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;you&#39;</span>, <span style="color:#ae81ff">6.8</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>L2 <span style="color:#f92672">=</span> L
+</span></span><span style="display:flex;"><span>print (<span style="color:#e6db74">&#34;L2:&#34;</span>, L2)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>L2[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;four point nine&#34;</span>
+</span></span><span style="display:flex;"><span>print (<span style="color:#e6db74">&#34;L2:&#34;</span>, L2)
+</span></span><span style="display:flex;"><span>print (<span style="color:#e6db74">&#34;L:&#34;</span>, L)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>L2: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4.9</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;how&#39;</span>, <span style="color:#e6db74">&#39;are&#39;</span>, <span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;you&#39;</span>, <span style="color:#ae81ff">6.8</span>]
+</span></span><span style="display:flex;"><span>L2: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;four point nine&#39;</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;how&#39;</span>, <span style="color:#e6db74">&#39;are&#39;</span>, <span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;you&#39;</span>, <span style="color:#ae81ff">6.8</span>]
+</span></span><span style="display:flex;"><span>L: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;four point nine&#39;</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;how&#39;</span>, <span style="color:#e6db74">&#39;are&#39;</span>, <span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;you&#39;</span>, <span style="color:#ae81ff">6.8</span>]
+</span></span></code></pre></div></blockquote>
+<p>Dapat dilihat dari output bahwa hasil perubahan <em>&lsquo;four point nine&rsquo;</em> juga mempengaruhi variabel yang lama yaitu <em>L</em>.</p>
+<p>Jika ingin melakukan copy dari variabel satu ke variabel lain, maka dapat menggunakan  <em>.copy()</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>L2 <span style="color:#f92672">=</span> L<span style="color:#f92672">.</span>copy()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>L2[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">4.9</span>
+</span></span><span style="display:flex;"><span>print (<span style="color:#e6db74">&#34;L2:&#34;</span>, L2)
+</span></span><span style="display:flex;"><span>print (<span style="color:#e6db74">&#34;L:&#34;</span>, L)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>L2: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4.9</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;how&#39;</span>, <span style="color:#e6db74">&#39;are&#39;</span>, <span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;you&#39;</span>, <span style="color:#ae81ff">6.8</span>]
+</span></span><span style="display:flex;"><span>L: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;four point nine&#39;</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;how&#39;</span>, <span style="color:#e6db74">&#39;are&#39;</span>, <span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;you&#39;</span>, <span style="color:#ae81ff">6.8</span>]
+</span></span></code></pre></div></blockquote>
+<p>Dapat dilihat dari output bahwa hasil perubahan tidak mempengaruhi variabel yang lama.</p>
+<p>Pada data structure tuple, tidak ada fungsi <em>.copy</em>. Ini dikarenakan tuple bersifat immutable. Elemen didalam tuple juga tidak bisa dirubah, oleh sebab itu tidak ada fungsi <em>.copy</em>. Yang ada hanya bisa men-assign kedalam variabel lain.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>T <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4.9</span>, <span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>T2 <span style="color:#f92672">=</span> T
+</span></span><span style="display:flex;"><span>print (<span style="color:#e6db74">&#34;T:&#34;</span>, T)
+</span></span><span style="display:flex;"><span>print (<span style="color:#e6db74">&#34;T2:&#34;</span>, T2)
+</span></span></code></pre></div><h3 id="melakukan-copy-dengan-menggunakan-slicing">Melakukan copy dengan menggunakan slicing</h3>
+<p>Jika menggunakan slicing untuk men-assign pada variabel baru, maka variabel baru tersebut sudah termasuk hasil copy-an baru (sama seperti fungsi <em>copy</em> sebelumnya). Jadi jika mengganti element pada variabel baru, maka variabel lama tidak akan berubah elementnya.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>L3 <span style="color:#f92672">=</span> L[<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">5</span>]
+</span></span><span style="display:flex;"><span>print(L3)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>[<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;four point nine&#39;</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;how&#39;</span>]
+</span></span></code></pre></div></blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>L3[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Three&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;L3:&#34;</span>, L3)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;L:&#34;</span>, L)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>L3: [<span style="color:#e6db74">&#39;Three&#39;</span>, <span style="color:#e6db74">&#39;four point nine&#39;</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;how&#39;</span>]
+</span></span><span style="display:flex;"><span>L: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;four point nine&#39;</span>, <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;how&#39;</span>, <span style="color:#e6db74">&#39;are&#39;</span>, <span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;you&#39;</span>, <span style="color:#ae81ff">6.8</span>]
+</span></span></code></pre></div></blockquote>
+<h2 id="the-abstractness-of-data-structures">The Abstractness of Data Structures</h2>
+<p>Didalam suatu data structures, bisa dimasukkan beberapa data structures lainnya didalam suatu data structures tersebut.</p>
+<p>Berikut contoh dengan menggunakan dictionary:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>D2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;A&#39;</span>:L, <span style="color:#e6db74">&#39;B&#39;</span>:T, <span style="color:#e6db74">&#39;C&#39;</span>:S, <span style="color:#e6db74">&#39;D&#39;</span>:D}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Mengakses List pada index ke 2  </span>
+</span></span><span style="display:flex;"><span>D2[<span style="color:#e6db74">&#39;A&#39;</span>][<span style="color:#ae81ff">3</span>] 
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Mengakses key D  </span>
+</span></span><span style="display:flex;"><span>K <span style="color:#f92672">=</span> D2[<span style="color:#e6db74">&#39;D&#39;</span>]
+</span></span><span style="display:flex;"><span>print(K)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Mengakses key dan value D dengan menggunakan loop  </span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> K:
+</span></span><span style="display:flex;"><span>    print(x,K[x])
+</span></span></code></pre></div><p>Berikut contoh dengan menggunakan list:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>L3 <span style="color:#f92672">=</span> [L,T,D,<span style="color:#ae81ff">23</span>,<span style="color:#e6db74">&#34;Game&#34;</span>]
+</span></span><span style="display:flex;"><span>print(type(L3[<span style="color:#ae81ff">2</span>]))
+</span></span></code></pre></div>
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/python">python</a></li>
+					
+					<li><a href="/tags/tutorial">tutorial</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/greythroat1" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="linkedin.com/in/rafli-ahmad-nur-579a03249" rel="me" title="Linkedin"><i data-feather="linkedin"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © Liquid Nitrogen |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Python Basic 4: Condition Statement - Liquid Nitrogen</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Mengenal conditional statement (if, else, dan elif) pada python." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Python Basic 4: Condition Statement" />
+<meta property="og:description" content="Mengenal conditional statement (if, else, dan elif) pada python." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://liquidnitrogen.github.io/posts/tutorial/condition-statement/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-26T01:34:05+07:00" />
+<meta property="article:modified_time" content="2022-08-26T01:34:05+07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python Basic 4: Condition Statement"/>
+<meta name="twitter:description" content="Mengenal conditional statement (if, else, dan elif) pada python."/>
+<script src="https://liquidnitrogen.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://liquidnitrogen.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://liquidnitrogen.github.io/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://liquidnitrogen.github.io/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css"  disabled />
+	
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://liquidnitrogen.github.io/">Liquid Nitrogen</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+		<script src="https://liquidnitrogen.github.io/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Python Basic 4: Condition Statement</h1>
+			<div class="meta">Posted on Aug 26, 2022</div>
+		</div>
+		
+
+		<section class="body">
+			<p>Condition statement merupakan pernyataan untuk menyatakan suatu keputusan, dimana jika suatu kondisi terpenuhi (bersifat <strong>True</strong>), maka kode akan dijalankan, jika tidak (bersifat <strong>False</strong>) maka akan diabaikan.</p>
+<p>Prinsip kerjanya yaitu jika suatu kondisi awal <strong>False</strong>, maka akan dilanjutkan ke kondisi selanjutnya, dan jika tetap <strong>False</strong>, akan dilanjutkan lagi ke kondisi selanjutnya, sampai menemukan kondisi <strong>True</strong>. Jika tidak ditemukan sama sekali kondisi <strong>True</strong>, maka output tidak akan mengeluarkan apa-apa (hanya blank) atau bahkan bisa error.</p>
+<p>Condition statement ditulis dengan <strong>if</strong>, <strong>else</strong>, dan <strong>elif</strong>.</p>
+<h2 id="if-statement"><strong>if</strong> Statement</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Variabel a :&#34;</span>))
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Variabel b :&#34;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> b <span style="color:#f92672">&gt;</span> a:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;b lebih besar dari a&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Diluar dari if statement&#34;</span>)
+</span></span></code></pre></div><p>Setelah kode dijalankan, jika user memasukkan nilai b lebih besar daripada a, yang mana kondisi terpenuhi (bersifat <strong>True</strong>), maka akan mengeluarkan output &ldquo;b lebih besar dari a&rdquo;. Sebaliknya, jika user memasukkan nilai a lebih besar daripada b, maka tidak akan mengeluarkan output apa-apa, dikarenakan kondisi tidak terpenuhi (bersifat <strong>False</strong>).</p>
+<p>Dari kode tersebut, setelah dijalankan baik statement yang bersifat <strong>True</strong> maupun <strong>False</strong> pasti mengeluarkan output &ldquo;Diluar dari if statement&rdquo;. Ini dikarenakan pernyataan tersebut tidak termasuk kedalam if statement. Mengapa? karena indentasinya (spasi) yang berbeda. Oleh karena itu dalam penulisan Condition, Loop, dan Function harus sangat memerhatikan indentasi.</p>
+<h2 id="else-statement"><strong>else</strong> Statement</h2>
+<p>Jika menginginkan suatu statement yang berbeda maka dapat menggunakan <strong>else</strong>. Dengan kata lain, jika tidak memenuhi kondisi pertama, maka dapat menggunakan <strong>else</strong> untuk memenuhi kondisi lain.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Variabel a :&#34;</span>))
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Variabel b :&#34;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> b <span style="color:#f92672">&gt;</span> a:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;b lebih besar dari a&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;a lebih besar dari b&#34;</span>)
+</span></span></code></pre></div><p>Penulisan <strong>else</strong> tidak perlu menjelaskan kondisi yang diinginkan. Oleh karena itu setelah <strong>else</strong> bisa langsung diikuti oleh titik dua.</p>
+<h2 id="elif-statement"><strong>elif</strong> Statement</h2>
+<p><strong>elif</strong> merupakan kepanjangan dari <strong>else</strong> dan <strong>if</strong>. Statement <strong>elif</strong> ini digunakan jika kondisi lebih dari dua dan terletak di antara <strong>if</strong> dan <strong>else</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>n <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Masukkan Nilai: &#34;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> n <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">85</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Nilai = A&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">elif</span> (n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">85</span>) <span style="color:#f92672">and</span> (n <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">80</span>):       <span style="color:#75715e"># Dapat menambahkan tanda kurung agar mudah dibaca</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Nilai = A-&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">elif</span> n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">80</span> <span style="color:#f92672">and</span> n <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">75</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Nilai = B&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">elif</span> n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">75</span> <span style="color:#f92672">and</span> n <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">70</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Nilai = B-&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Dibawah Rata-rata&#34;</span>)
+</span></span></code></pre></div><h2 id="nested-if">Nested <strong>if</strong></h2>
+<p>Yaitu <strong>if</strong> yang didalamnya terdapat <strong>if</strong> lagi. Indentasi harus lebih masuk lagi untuk membuat kondisi <strong>if</strong> baru. Fungsinya yaitu berguna untuk menjelaskan lebih detail dari kondisi <strong>if</strong> sebelumnya.</p>
+<p>Nested <strong>if</strong> dapat dilakukan berulang-ulang kali, tidak ada batasan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Angka: &#34;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> a<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;&gt;10&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;didalam if pertama&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> a<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">20</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;&gt;20&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;didalam nested if&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;&lt;20&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;didalam kondisi else dari nested if&#34;</span>)
+</span></span></code></pre></div><p>Contoh lain yang lebih kompleks:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> int(input(<span style="color:#e6db74">&#34;Angka: &#34;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> a<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;&gt;10&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;didalam if pertama&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> a<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">20</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;&gt;20&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;didalam nested if&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> a<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">30</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;&gt;30&#34;</span>)
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;didalam nested if dari if pertama&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;&lt;=30&#34;</span>)
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;didalam kondisi else dari nested if dari if pertama&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;&lt;=20&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;didalam kondisi else dari nested if&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;&lt;=10&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;didalam kondisi else&#34;</span>)
+</span></span></code></pre></div><blockquote>
+<p><strong>Indentasi sangat berpengaruh terhadap kondisi if-else-elif, oleh karena itu harus sangat diperhatikan.</strong></p>
+</blockquote>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/python">python</a></li>
+					
+					<li><a href="/tags/tutorial">tutorial</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/greythroat1" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="linkedin.com/in/rafli-ahmad-nur-579a03249" rel="me" title="Linkedin"><i data-feather="linkedin"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © Liquid Nitrogen |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

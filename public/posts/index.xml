@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Liquid Nitrogen</title>
+    <link>https://liquidnitrogen.github.io/posts/</link>
+    <description>Recent content in Posts on Liquid Nitrogen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Liquid Nitrogen</copyright>
+    <lastBuildDate>Mon, 17 Apr 2023 22:33:26 +0700</lastBuildDate><atom:link href="https://liquidnitrogen.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Basic 8: Data Structures</title>
+      <link>https://liquidnitrogen.github.io/posts/tutorial/data-structures/</link>
+      <pubDate>Wed, 07 Sep 2022 01:35:24 +0700</pubDate>
+      
+      <guid>https://liquidnitrogen.github.io/posts/tutorial/data-structures/</guid>
+      <description>Data structures adalah koleksi atau kumpulan dari banyak data. Data tersebut bersifat heterogen yang berarti dapat berjenis integer, string, float, dsb..
+Terdapat 4 jenis Data structures yang umum yaitu : List, Tuple, Set, dan Dictionary.
+Masing-masing memiliki karakteristiknya sendiri. Berikut merupakan karakteristiknya:
+Data Structures Ordered or Not? Mutable or Immutable? Can Have Duplicates or Not? Symbol List Ordered Mutable (Changeable) Yes [] Tuple Ordered Immutable (Unchangeable) Yes ( ) Set Unordered Immutable, but Addable and Removable No { } Dictionary Unordered Mutable (Changeable) No { } Ordered yaitu elemen (data) mempunyai posisi yang berarti bisa dilakukan index terhadap elemen didalamnya terhadap posisinya.</description>
+    </item>
+    
+    <item>
+      <title>Python Basic 7: String</title>
+      <link>https://liquidnitrogen.github.io/posts/tutorial/string/</link>
+      <pubDate>Thu, 01 Sep 2022 01:35:05 +0700</pubDate>
+      
+      <guid>https://liquidnitrogen.github.io/posts/tutorial/string/</guid>
+      <description>Semua tulisan yang diapit oleh tanda petik (&amp;rsquo; atau &amp;ldquo;) dikatakan sebagai string. Contoh penulisannya yaitu: &amp;lsquo;kata&amp;rsquo; atau &amp;ldquo;kata&amp;rdquo;, tetapi tidak boleh digabung antara tanda petik 1 dan tanda petik 2 seperti: &amp;lsquo;kata&amp;rdquo;.
+Merging String Untuk menggabungkan banyak string, dapat menambahkan tanda tambah (+).
+s = &amp;#34;Python is the best language for data science&amp;#34; t = &amp;#39;Its very easy to write&amp;#39; print(s+&amp;#39;and&amp;#39;+t) print(s+&amp;#39; and &amp;#39;+t) # Ditaruh spasi agar output memiliki spasi diantara dua string Selain dengan menambahkan dengan tanda tambah (+), dapat juga menggunakan tanda koma (,).</description>
+    </item>
+    
+    <item>
+      <title>Python Basic 6: Function</title>
+      <link>https://liquidnitrogen.github.io/posts/tutorial/function/</link>
+      <pubDate>Mon, 29 Aug 2022 01:34:52 +0700</pubDate>
+      
+      <guid>https://liquidnitrogen.github.io/posts/tutorial/function/</guid>
+      <description>Function adalah perintah untuk menyimpan suatu argumen, yang nantinya dapat digunakan kembali argumen tersebut ketika diinginkan.
+Kegunaan dari function ini yaitu kita dapat menyimpan argumen atau rumus yang sangat panjang kedalam function tersebut, sehingga nantinya jika ingin menggunakan argumen atau rumus tersebut kembali, kita dapat memanggil function tersebut, tidak perlu membuat kode berulang-ulang kali.
+Function memiliki kata kunci def yang berarti define.
+Basic Cara penulisan function yaitu menuliskan def terlebih dahulu, diikuti oleh nama dari function tersebut dan diakhiri oleh tanda kurung.</description>
+    </item>
+    
+    <item>
+      <title>Python Basic 5: Iteration</title>
+      <link>https://liquidnitrogen.github.io/posts/tutorial/iteration/</link>
+      <pubDate>Sat, 27 Aug 2022 01:34:40 +0700</pubDate>
+      
+      <guid>https://liquidnitrogen.github.io/posts/tutorial/iteration/</guid>
+      <description>Iteration (loop) digunakan untuk menjalankan kode yang sama dan berulang-ulang.
+Terdapat dua jenis loop: while dan for.
+Keduanya dapat memiliki fungsi yang sama, hanya berbeda dari penulisan syntax-nya saja, tetapi biasanya while loop digunakan pada saat data yang ingin diiterasikan tidak diketahui pasti berapa jumlahnya, sedangkan for loop digunakan pada saat data yang diiterasikan diketahui pasti berapa jumlahnya.
+while loop n = int(input(&amp;#34;Angka:&amp;#34;)) i = 1 while i &amp;lt; n: print (i**2) print (&amp;#34;Ini merupakan iterasi ke-&amp;#34;,i) i+=1 #sama seperti i = i+1 print(&amp;#34;Iterasi selesai&amp;#34;) pass Statement pass merupakan statement untuk tidak melakukan apa-apa, yang berarti tidak ada yang perlu dilakukan didalam badan loop.</description>
+    </item>
+    
+    <item>
+      <title>Python Basic 4: Condition Statement</title>
+      <link>https://liquidnitrogen.github.io/posts/tutorial/condition-statement/</link>
+      <pubDate>Fri, 26 Aug 2022 01:34:05 +0700</pubDate>
+      
+      <guid>https://liquidnitrogen.github.io/posts/tutorial/condition-statement/</guid>
+      <description>Condition statement merupakan pernyataan untuk menyatakan suatu keputusan, dimana jika suatu kondisi terpenuhi (bersifat True), maka kode akan dijalankan, jika tidak (bersifat False) maka akan diabaikan.
+Prinsip kerjanya yaitu jika suatu kondisi awal False, maka akan dilanjutkan ke kondisi selanjutnya, dan jika tetap False, akan dilanjutkan lagi ke kondisi selanjutnya, sampai menemukan kondisi True. Jika tidak ditemukan sama sekali kondisi True, maka output tidak akan mengeluarkan apa-apa (hanya blank) atau bahkan bisa error.</description>
+    </item>
+    
+    <item>
+      <title>Python Basic 3: Built in Function</title>
+      <link>https://liquidnitrogen.github.io/posts/tutorial/built-in-function/</link>
+      <pubDate>Fri, 26 Aug 2022 01:33:30 +0700</pubDate>
+      
+      <guid>https://liquidnitrogen.github.io/posts/tutorial/built-in-function/</guid>
+      <description>Terdapat banyak jenis function yang telah tertanam pada python itu sendiri. Kegunaan function ini yaitu kita dapat mengatur atau memerintahkan kode yang telah dibuat menjadi lebih spesifik. Dengan adanya function ini juga, akan memudahkan pembuatan kode yang ingin dibuat nantinya.
+Dalam tutorial ini, hanya beberapa jenis saja yang dijelaskan.
+round( ) round( ) adalah function yang digunakan pada angka untuk pembulatan terdekat (bisa keatas maupun kebawah)
+print (round(5.6391)) Jika ingin mengambil beberapa angka dibelakang koma, dapat menulis jumlah angkanya dengan tanda koma setelah angka yang ingin dicari.</description>
+    </item>
+    
+    <item>
+      <title>Python Basic 2: Boolean &amp; Comparisons</title>
+      <link>https://liquidnitrogen.github.io/posts/tutorial/boolean--comparisons/</link>
+      <pubDate>Thu, 25 Aug 2022 01:28:05 +0700</pubDate>
+      
+      <guid>https://liquidnitrogen.github.io/posts/tutorial/boolean--comparisons/</guid>
+      <description>Boolean menyatakan kebenaran dari suatu data, bisa berupa True dan False. Boolean ini sangat erat hubungannya dengan comparisons. Dengan adanya perbandingan menggunakan comparisons, data akan menjadi True ataupun False.
+Boolean Terdapat 3 jenis penghubung utama dari Boolean ini yaitu:
+and ; jika 2 objek True, maka output akan True. Selain itu akan False or ; jika 2 objek False, maka output akan False. Selain itu akan True not( ) ; merupakan kebalikan dari output yang dihasilkan (True menjadi False dan sebaliknya) a = True b = True c = False d = False %whos Jika di run akan menghasilkan type/jenis data dari variabel-variabel tersebut (bisa juga menggunakan type()).</description>
+    </item>
+    
+    <item>
+      <title>Python Basic 1: Variables &amp; Operators</title>
+      <link>https://liquidnitrogen.github.io/posts/tutorial/variables--operators/</link>
+      <pubDate>Wed, 24 Aug 2022 01:06:48 +0700</pubDate>
+      
+      <guid>https://liquidnitrogen.github.io/posts/tutorial/variables--operators/</guid>
+      <description>Semua penjelasan mengenai python basic pada website ini bersumber dari video freeCodeCamp.org, dan penulis menjalankan pemograman python melalui Jupyter.
+Variablel dan operator merupakan hal yang paling basic dalam bahasa pemograman, dimana dengan menggunakan variabel, kita dapat menyimpan suatu data kedalam variabel yang telah ditentukan. Sedangkan operator digunakan untuk menggabungkan atau menghitung dari dua data atau lebih seperti pada operasi matematika.
+Variables Dengan menggunakan variabel, kita dapat menyimpan suatu data. Khusus pada awal ini, kita hanya menggunakan 4 jenis data yang umum terlebih dahulu, yaitu: Integer, Float, Complex dan String.</description>
+    </item>
+    
+    <item>
+      <title>Python Introduction</title>
+      <link>https://liquidnitrogen.github.io/posts/tutorial/python-introduction/</link>
+      <pubDate>Wed, 24 Aug 2022 00:42:08 +0700</pubDate>
+      
+      <guid>https://liquidnitrogen.github.io/posts/tutorial/python-introduction/</guid>
+      <description>Python merupakan bahasa pemograman yang sangat populer, tercatat pada Agustus tahun 2022, python mencapai peringkat 1 menurut TIOBE Index.
+Python menjadi sangat populer karena syntax yang mudah untuk dipahami dibanding bahasa pemograman lainnya. Oleh karena itu, tidak ada salahnya untuk belajar bahasa pemograman ini. Selain itu dengan mempelajari python, kita dapat memperoleh soft skill yang dapat menjadi nilai lebih dari diri kita. Tidak perlu latar belakang pendidikan seperti IT, Teknik Komputer atau yang berhubungan dengan komputer lainnya untuk bisa belajar python.</description>
+    </item>
+    
+  </channel>
+</rss>

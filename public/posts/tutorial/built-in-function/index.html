@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Python Basic 3: Built in Function - Liquid Nitrogen</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Penggunaan beberapa jenis built in function pada python." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Python Basic 3: Built in Function" />
+<meta property="og:description" content="Penggunaan beberapa jenis built in function pada python." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://liquidnitrogen.github.io/posts/tutorial/built-in-function/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-26T01:33:30+07:00" />
+<meta property="article:modified_time" content="2022-08-26T01:33:30+07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python Basic 3: Built in Function"/>
+<meta name="twitter:description" content="Penggunaan beberapa jenis built in function pada python."/>
+<script src="https://liquidnitrogen.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://liquidnitrogen.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://liquidnitrogen.github.io/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://liquidnitrogen.github.io/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css"  disabled />
+	
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://liquidnitrogen.github.io/">Liquid Nitrogen</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+		<script src="https://liquidnitrogen.github.io/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Python Basic 3: Built in Function</h1>
+			<div class="meta">Posted on Aug 26, 2022</div>
+		</div>
+		
+
+		<section class="body">
+			<p>Terdapat banyak jenis function yang telah tertanam pada <code>python</code> itu sendiri. Kegunaan function ini yaitu kita dapat mengatur atau memerintahkan kode yang telah dibuat menjadi lebih spesifik. Dengan adanya function ini juga, akan memudahkan pembuatan kode yang ingin dibuat nantinya.</p>
+<p>Dalam tutorial ini, hanya beberapa jenis saja yang dijelaskan.</p>
+<h2 id="round-"><strong>round( )</strong></h2>
+<p><strong>round( )</strong> adalah function yang digunakan pada angka untuk pembulatan terdekat (bisa keatas maupun kebawah)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print (round(<span style="color:#ae81ff">5.6391</span>))
+</span></span></code></pre></div><p>Jika ingin mengambil beberapa angka dibelakang koma, dapat menulis jumlah angkanya dengan tanda koma setelah angka yang ingin dicari.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># angka setelah koma merupakan pembulatan yang diinginkan berapa dibelakang koma</span>
+</span></span><span style="display:flex;"><span>print (round(<span style="color:#ae81ff">11.198713</span>, <span style="color:#ae81ff">3</span>))
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ae81ff">11.199</span>
+</span></span></code></pre></div></blockquote>
+<h2 id="divmodxy"><strong>divmod(x,y)</strong></h2>
+<p><strong>divmod(x,y)</strong> adalah function untuk pembagian yang outputnya akan menghasilkan <strong>hasil pembagian</strong> dan <strong>sisa dari pembagian</strong>. x merupakan pembilang dan y merupakan penyebut.</p>
+<p>Sisa dari pembagian yang dimaksud bukan sisa hasil, tetapi sisa dari angka yang tidak bisa dibagi. Output akan berjenis tuple (untuk tuple akan dipelajari pada tutorial selanjutnya).</p>
+<p>Fungsi divmod ini sama seperti penggabungan antara operator <strong>//</strong> dan operator <strong>%</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>divmod (<span style="color:#ae81ff">27</span>,<span style="color:#ae81ff">5</span>)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span>)
+</span></span></code></pre></div></blockquote>
+<p>Output/hasil akan berjenis tuple.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>b <span style="color:#f92672">=</span> divmod(<span style="color:#ae81ff">34</span>,<span style="color:#ae81ff">9</span>)
+</span></span><span style="display:flex;"><span>print (type(b))
+</span></span><span style="display:flex;"><span>print (b)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">tuple</span><span style="color:#e6db74">&#39;&gt;</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>)
+</span></span></code></pre></div></blockquote>
+<h2 id="isinstance-"><strong>isinstance( )</strong></h2>
+<p><strong>isinstance( )</strong> adalah function untuk menentukan apakah objek termasuk jenis data tertentu. Output akan menghasilkan <strong>True</strong> ataupun <strong>False</strong>.<br>
+Jika salah satu jenis data terpenuhi, maka tetap akan menghasilkan output <strong>True</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(isinstance(<span style="color:#ae81ff">1</span>, int))
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(isinstance(<span style="color:#ae81ff">1.0</span>, int))
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> isinstance(<span style="color:#ae81ff">2.0</span>, (int, float, complex))  <span style="color:#75715e"># akan menghasilkan True karena salah satu jenis data terpenuhi</span>
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> isinstance(<span style="color:#ae81ff">40</span><span style="color:#f92672">+</span><span style="color:#ae81ff">9</span>j, (int, str))
+</span></span><span style="display:flex;"><span>print(a)
+</span></span><span style="display:flex;"><span>print(b)
+</span></span></code></pre></div><h2 id="powxyz"><strong>pow(x,y,z)</strong></h2>
+<p><strong>pow(x,y,z)</strong> adalah function untuk menghasilkan pangkat dari suatu angka.</p>
+<p>Function ini sama seperti operator biasa yaitu ** , tetapi terdapat tambahan yaitu z yang fungsinya sama seperti operator %.<br>
+Maka dapat dirumuskan <strong>pow(x,y,z)</strong> = x ** y % z</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pow(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pow(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">6</span>)
+</span></span></code></pre></div><h2 id="input-"><strong>input( )</strong></h2>
+<p><strong>input( )</strong> merupakan function interactive yang mana untuk memasukkan input, dapat dilakukan setelah kode di run. Objek yang dimasukkan bebas kedalam input tersebut. Objek yang dihasilkan selalu berjenis <em><strong>string</strong></em>. Jadi walaupun memasukkan angka, maka angka tersebut akan diubah kedalam bentuk string.</p>
+<p>Jika ingin data yang diinput berjenis integer, float, dsb. maka perlu diubah terlebih. Perubahan bisa dilakukan di akhir setelah mendapatkan hasil, maupun di awal dalam pembuatan code. Jika diawal, maka semua objek yang dimasukkan akan diubah sesuai dengan yang ditentukan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter a number :&#34;</span>)
+</span></span></code></pre></div><p><em>nb: Tanda petik berupa data string, hanya untuk menjelaskan kode yang akan dijalankan nanti.</em></p>
+<p>Maka, output akan selalu berjenis string.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>type(a)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>str
+</span></span></code></pre></div></blockquote>
+<p>Untuk mengubahnya dapat dilakukan setelah kode dijalankan atau pada saat awal pembuatan kode.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Merubah jenis data dengan yang diinginkan dari kode yang telah dibuat sebelumnya, mis: integer</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> int(a)
+</span></span><span style="display:flex;"><span>type(a)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>int
+</span></span></code></pre></div></blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Merubah jenis data dengan yang diinginkan pada awal pembuatan kode, mis: float</span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">=</span> float(input(<span style="color:#e6db74">&#34;Masukkan angka:&#34;</span>))
+</span></span></code></pre></div><p>Maka, output akan selalu berjenis float.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>type(x)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>float
+</span></span></code></pre></div></blockquote>
+<p>Untuk jenis-jenis Built-in Function lainnya dapat dilihat pada <a href="https://docs.python.org/3/library/functions.html">Link</a></p>
+<p>Pada <code>python</code> itu sendiri, bisa juga mengetahui kegunaan dan bagaimana cara memakai dari masing-masing Built-in Function, yaitu dengan menuliskan tanda tanya atau help.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>abs<span style="color:#960050;background-color:#1e0010">?</span>
+</span></span></code></pre></div><p>Atau</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>help(abs)
+</span></span></code></pre></div>
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/python">python</a></li>
+					
+					<li><a href="/tags/tutorial">tutorial</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/greythroat1" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="linkedin.com/in/rafli-ahmad-nur-579a03249" rel="me" title="Linkedin"><i data-feather="linkedin"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © Liquid Nitrogen |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

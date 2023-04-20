@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Python Basic 2: Boolean &amp; Comparisons - Liquid Nitrogen</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Mengenal boolean dan comparisons pada python" />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Python Basic 2: Boolean &amp; Comparisons" />
+<meta property="og:description" content="Mengenal boolean dan comparisons pada python" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://liquidnitrogen.github.io/posts/tutorial/boolean--comparisons/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-25T01:28:05+07:00" />
+<meta property="article:modified_time" content="2022-08-25T01:28:05+07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python Basic 2: Boolean &amp; Comparisons"/>
+<meta name="twitter:description" content="Mengenal boolean dan comparisons pada python"/>
+<script src="https://liquidnitrogen.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://liquidnitrogen.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://liquidnitrogen.github.io/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://liquidnitrogen.github.io/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css"  disabled />
+	
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://liquidnitrogen.github.io/">Liquid Nitrogen</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+		<script src="https://liquidnitrogen.github.io/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Python Basic 2: Boolean &amp; Comparisons</h1>
+			<div class="meta">Posted on Aug 25, 2022</div>
+		</div>
+		
+
+		<section class="body">
+			<p>Boolean menyatakan kebenaran dari suatu data, bisa berupa <strong>True</strong> dan <strong>False</strong>. Boolean ini sangat erat hubungannya dengan comparisons. Dengan adanya perbandingan menggunakan comparisons, data akan menjadi <strong>True</strong> ataupun <strong>False</strong>.</p>
+<h2 id="boolean">Boolean</h2>
+<p>Terdapat 3 jenis penghubung utama dari Boolean ini yaitu:</p>
+<ul>
+<li><strong>and</strong> ; jika 2 objek True, maka output akan True. Selain itu akan False</li>
+<li><strong>or</strong> ; jika 2 objek False, maka output akan False. Selain itu akan True</li>
+<li><strong>not( )</strong> ; merupakan kebalikan dari output yang dihasilkan (True menjadi False dan sebaliknya)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>c <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>d <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>whos
+</span></span></code></pre></div><p>Jika di run akan menghasilkan type/jenis data dari variabel-variabel tersebut (bisa juga menggunakan <strong>type()</strong>).</p>
+<p>Kemudian kita bisa membandingkan antara kedua jenis atau lebih variabel dengan menggunakan ketiga penghubung.</p>
+<p>Contoh dengan menggunakan <strong>and</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print (a <span style="color:#f92672">and</span> b)
+</span></span><span style="display:flex;"><span>print (a <span style="color:#f92672">and</span> c)
+</span></span><span style="display:flex;"><span>print (c <span style="color:#f92672">and</span> b)
+</span></span><span style="display:flex;"><span>print (c <span style="color:#f92672">and</span> d)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">False</span>
+</span></span></code></pre></div></blockquote>
+<p>Dilihat pada hasil dengan menggunakan <strong>and</strong>, penggabungan antara True dan True akan selalu menghasilkan True. Sedangkan penggabungan antara True dan False atau False dan False akan selalu menghasilkan False.</p>
+<p>Contoh dengan menggunakan <strong>or</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(a <span style="color:#f92672">or</span> b)
+</span></span><span style="display:flex;"><span>print(a <span style="color:#f92672">or</span> c)
+</span></span><span style="display:flex;"><span>print(c <span style="color:#f92672">or</span> b)
+</span></span><span style="display:flex;"><span>print(c <span style="color:#f92672">or</span> d)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">False</span>
+</span></span></code></pre></div></blockquote>
+<p>Dilihat pada hasil dengan menggunakan <strong>or</strong>, penggabungan antara True dan True serta True dan False, akan selalu menghasilkan True. Sedangkan penggabungan antara False dan False akan selalu menghasilkan False.</p>
+<p>Penggunaan <strong>not()</strong> akan menghasilkan kebalikan dari jenis bool yang telah diketahui/didapat. Jika awalnya True maka akan menjadi False, dan jika awalnya False maka akan menjadi True.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#f92672">not</span>(a))
+</span></span><span style="display:flex;"><span>print(<span style="color:#f92672">not</span>(d))
+</span></span></code></pre></div><p>Contoh dari penggabungan ketiganya:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#f92672">not</span>((a <span style="color:#f92672">and</span> d) <span style="color:#f92672">or</span> (c <span style="color:#f92672">or</span> d)))
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th style="text-align:center">Jenis Penghubung Boolean</th>
+<th style="text-align:center">Penggabungan</th>
+<th style="text-align:center">Hasil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">And</td>
+<td style="text-align:center">True x True</td>
+<td style="text-align:center">True</td>
+</tr>
+<tr>
+<td style="text-align:center">And</td>
+<td style="text-align:center">True x False</td>
+<td style="text-align:center">False</td>
+</tr>
+<tr>
+<td style="text-align:center">And</td>
+<td style="text-align:center">False x False</td>
+<td style="text-align:center">False</td>
+</tr>
+<tr>
+<td style="text-align:center">Or</td>
+<td style="text-align:center">True x True</td>
+<td style="text-align:center">True</td>
+</tr>
+<tr>
+<td style="text-align:center">Or</td>
+<td style="text-align:center">True x False</td>
+<td style="text-align:center">True</td>
+</tr>
+<tr>
+<td style="text-align:center">Or</td>
+<td style="text-align:center">False x False</td>
+<td style="text-align:center">False</td>
+</tr>
+</tbody>
+</table>
+<h2 id="comparisons">Comparisons</h2>
+<p>Setiap comparisons akan berjenis bool, maka hasil dari comparisons akan menghasilkan <strong>True</strong> atau <strong>False</strong>. Berikut merupakan jenis-jenis comparisons:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Symbol</th>
+<th>Task</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">==</td>
+<td>True, jika sama dengan</td>
+</tr>
+<tr>
+<td style="text-align:center">!=</td>
+<td>True, jika tidak sama dengan</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;</td>
+<td>kurang dari</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;</td>
+<td>lebih dari</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;=</td>
+<td>kurang sama dengan</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;=</td>
+<td>lebih sama dengan</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#ae81ff">2</span><span style="color:#f92672">&lt;</span><span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">3</span><span style="color:#f92672">==</span><span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#ae81ff">3</span><span style="color:#f92672">==</span><span style="color:#ae81ff">3.0</span>)
+</span></span></code></pre></div><p>Comparison ini bisa juga digabungkan dengan jenis penghubung boolean sebelumnya. Contohnya:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>
+</span></span><span style="display:flex;"><span>z <span style="color:#f92672">=</span> <span style="color:#ae81ff">8.4</span>
+</span></span><span style="display:flex;"><span>r <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print((x<span style="color:#f92672">&lt;</span>y) <span style="color:#f92672">and</span> (z<span style="color:#f92672">&lt;</span>y) <span style="color:#f92672">or</span> (r<span style="color:#f92672">==</span>x))
+</span></span></code></pre></div><p>Penggunaan <strong>and</strong> dan <strong>or</strong> jika dibuat bersamaan akan mendahulukan <strong>and</strong> walaupun dalam penulisan dibuat <strong>or</strong> terlebih dahulu.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#66d9ef">False</span> <span style="color:#f92672">and</span> <span style="color:#66d9ef">False</span> <span style="color:#f92672">or</span> <span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">True</span>
+</span></span></code></pre></div></blockquote>
+<p>Dengan penggunaan <strong>or</strong> terlebih dahulu:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#66d9ef">True</span> <span style="color:#f92672">or</span> <span style="color:#66d9ef">False</span> <span style="color:#f92672">and</span> <span style="color:#66d9ef">False</span>)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">True</span>
+</span></span></code></pre></div></blockquote>
+<p>Dari hasil diatas, seharusnya output menjadi False. Tetapi dikarenakan yang dibaca terlebih dahulu adalah <strong>and</strong> dan <strong>or</strong> terakhir, maka output akan menjadi True.</p>
+<p>Jika ingin menggunakan <strong>or</strong> terlebih dahulu, dapat menggunakan tanda kurung pada bagian <strong>or</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print((<span style="color:#66d9ef">True</span> <span style="color:#f92672">or</span> <span style="color:#66d9ef">False</span>) <span style="color:#f92672">and</span> <span style="color:#66d9ef">False</span>)
+</span></span></code></pre></div><blockquote>
+<p>Output:</p>
+</blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">False</span>
+</span></span></code></pre></div></blockquote>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/python">python</a></li>
+					
+					<li><a href="/tags/tutorial">tutorial</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/greythroat1" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="linkedin.com/in/rafli-ahmad-nur-579a03249" rel="me" title="Linkedin"><i data-feather="linkedin"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © Liquid Nitrogen |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>
