@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>qgis on GreyThroat</title>
+    <link>https://greythroat1.github.io/blog/tags/qgis/</link>
+    <description>Recent content in qgis on GreyThroat</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© GreyThroat</copyright>
+    <lastBuildDate>Wed, 26 Apr 2023 13:21:12 +0700</lastBuildDate><atom:link href="https://greythroat1.github.io/blog/tags/qgis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cara menambahkan Basemap Layer pada QGIS</title>
+      <link>https://greythroat1.github.io/blog/posts/tutorial/menambahkan-basemap-layer-pada-qgis/</link>
+      <pubDate>Wed, 26 Apr 2023 13:21:12 +0700</pubDate>
+      
+      <guid>https://greythroat1.github.io/blog/posts/tutorial/menambahkan-basemap-layer-pada-qgis/</guid>
+      <description>Basemap merupakan layer yang menampilkan peta atau wilayah secara keseluruhan. Biasanya dapat berupa batas administrasi, jalan, nama tempat, dsb. Beberapa contoh dari basemap ini yaitu Google Maps, Google Satellite, Google Terrain, dll.. Terkadang kita memerlukan layer tersebut untuk menunjang pekerjaan yang akan dilakukan pada aplikasi GIS. Pada aplikasi QGIS, basemap yang tersedia setelah melakukan instalasi hanya OpenStreetMap. Jika ingin menambah basemap yang lain, maka terdapat beberapa cara, diantaranya yaitu:
+Menambahkan secara manual Menggunakan plugin Berikut cara menambahkan basemap.</description>
+    </item>
+    
+  </channel>
+</rss>

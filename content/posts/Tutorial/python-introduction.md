@@ -6,7 +6,7 @@ tags: ["python"]
 ---
 
 
-![Python Introduction](/img/python.jpg)  
+![Python Introduction](/img/Python/introduction/python.jpg)  
 
 
 `Python` merupakan bahasa pemograman yang sangat populer, tercatat pada Agustus tahun 2022, `python` mencapai peringkat 1 menurut [TIOBE Index](https://www.tiobe.com/tiobe-index/).
@@ -63,16 +63,15 @@ Nah, untuk menggunakan `python`, anda memerlukan Text Editor atau IDE (Integrate
 
 1. [Jupyter Notebook](https://jupyter.org/) atau [Jupyter Lab](https://jupyter.org/)  
 
-2. [Atom](https://atom.io/)  
+2. [Visual Studio Code](https://code.visualstudio.com/)  atau [VSCodium](https://vscodium.com/)
 
-3. [Visual Studio Code](https://code.visualstudio.com/)  atau [VSCodium](https://vscodium.com/)
+3. [Sublime Text](https://www.sublimetext.com/)  
 
-4. [Sublime Text](https://www.sublimetext.com/)  
+4. [Spyder](https://www.spyder-ide.org/)
 
-5. [Spyder](https://www.spyder-ide.org/)
+5. [Vim](https://www.vim.org/) atau [Neovim](https://neovim.io/)  
 
-6. [Vim](https://www.vim.org/) atau [Neovim](https://neovim.io/)  
-
+6. [Helix](https://helix-editor.com/)
 
 *Jika menggunakan Anaconda, anda tidak perlu lagi mengunduh Text Editor atau IDE lainnya dikarenakan Anaconda sudah mem-bundle Jupyter dan Spyder.*
 

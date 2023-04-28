@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Cara menambahkan Basemap Layer pada QGIS - GreyThroat</title><link rel="icon" type="image/png" href=favicon.ico /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Menambahkan basemap layer (ex: Google Maps, Google Satellite, Google Terrain, etc.) pada QGIS secara manual dan dengan bantuan plugin." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Cara menambahkan Basemap Layer pada QGIS" />
+<meta property="og:description" content="Menambahkan basemap layer (ex: Google Maps, Google Satellite, Google Terrain, etc.) pada QGIS secara manual dan dengan bantuan plugin." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://greythroat1.github.io/blog/posts/tutorial/menambahkan-basemap-layer-pada-qgis/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-26T13:21:12+07:00" />
+<meta property="article:modified_time" content="2023-04-26T13:21:12+07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cara menambahkan Basemap Layer pada QGIS"/>
+<meta name="twitter:description" content="Menambahkan basemap layer (ex: Google Maps, Google Satellite, Google Terrain, etc.) pada QGIS secara manual dan dengan bantuan plugin."/>
+<script src="https://greythroat1.github.io/blog/js/feather.min.js"></script>
+	
+	
+        <link href="https://greythroat1.github.io/blog/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://greythroat1.github.io/blog/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://greythroat1.github.io/blog/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css"  disabled />
+	
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://greythroat1.github.io/blog/">GreyThroat</a>
+	</div>
+	<nav>
+		
+		<a href="https://greythroat1.github.io/blog/">Home</a>
+		
+		<a href="https://greythroat1.github.io/blog/posts">All posts</a>
+		
+		<a href="https://greythroat1.github.io/blog/about">About</a>
+		
+		<a href="https://greythroat1.github.io/blog/tags">Tags</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+		<script src="https://greythroat1.github.io/blog/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Cara menambahkan Basemap Layer pada QGIS</h1>
+			<div class="meta">Posted on Apr 26, 2023</div>
+		</div>
+		
+
+		<section class="body">
+			<p>Basemap merupakan layer yang menampilkan peta atau wilayah secara keseluruhan.
+Biasanya dapat berupa batas administrasi, jalan, nama tempat, dsb. Beberapa
+contoh dari basemap ini yaitu Google Maps, Google Satellite, Google Terrain,
+dll.. Terkadang kita memerlukan layer tersebut untuk menunjang pekerjaan yang
+akan dilakukan pada aplikasi GIS. Pada aplikasi QGIS, basemap yang tersedia
+setelah melakukan instalasi hanya OpenStreetMap. Jika ingin menambah basemap
+yang lain, maka terdapat beberapa cara, diantaranya yaitu:</p>
+<ol>
+<li>Menambahkan secara manual</li>
+<li>Menggunakan plugin</li>
+</ol>
+<p>Berikut cara menambahkan basemap.</p>
+<h2 id="menambahkan-secara-manual">Menambahkan Secara Manual</h2>
+<p>Dengan menambahkan basemap secara manual, terdapat beberapa pilihan, yaitu
+sebagai berikut.</p>
+<h3 id="menggunakan-xyz-tiles">Menggunakan XYZ Tiles</h3>
+<p>Jika menggunakan cara ini, berarti kita menambahkan basemap secara satu persatu
+dengan memasukkan link basemap yang diinginkan. Berikut link dari beberapa
+service yang dapat digunakan.</p>
+<p><strong>Google Maps:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>https://mt1.google.com/vt/lyrs=m&amp;x={x}&amp;y={y}&amp;z={z}
+</span></span></code></pre></div><p><strong>Google Satellite:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>https://mt1.google.com/vt/lyrs=s&amp;x={x}&amp;y={y}&amp;z={z}
+</span></span></code></pre></div><p><strong>Google Satellite Hybrid:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>https://mt1.google.com/vt/lyrs=y&amp;x={x}&amp;y={y}&amp;z={z}
+</span></span></code></pre></div><p><strong>Google Terrain:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>https://mt1.google.com/vt/lyrs=t&amp;x={x}&amp;y={y}&amp;z={z}
+</span></span></code></pre></div><p><strong>Esri World Topo:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}
+</span></span></code></pre></div><p>Berikut cara memasukkan link tersebut.</p>
+<ol>
+<li>Arahkan mouse ke bagian Browser, pilih XYZ Tiles.</li>
+<li>Klik kanan &gt; klik New Connection&hellip;</li>
+</ol>
+<figure><img src="https://greythroat1.github.io/blog/img/QGIS/basemap/XYZ_Tiles-1.png"
+         alt="XYZ Tiles-1" width="240px"/>
+</figure>
+
+<ol start="3">
+<li>Ketik sesuai dengan layer yang akan dimasukkan, kemudian masukkan link
+ke bagian URL.</li>
+</ol>
+<figure><img src="https://greythroat1.github.io/blog/img/QGIS/basemap/XYZ_Tiles-2.png"
+         alt="XYZ Tiles-2" width="340px"/>
+</figure>
+
+<ol start="4">
+<li>Klik OK. Layer akan muncul pada bagian XYZ Tiles.</li>
+</ol>
+<blockquote>
+<p>Cara lainnya untuk mengakses XYZ Tiles yaitu pada Layer &gt; Data Source Manager &gt;
+XYZ. Pada XYZ Connection, klik New.</p>
+</blockquote>
+<p>Jika ingin menambahkan link lainnya, maka dapat mengunjungi
+<em><a href="https://qms.nextgis.com/">https://qms.nextgis.com/</a></em> dan memilih menu TMS.</p>
+<h3 id="menggunakan-python-script">Menggunakan Python Script</h3>
+<p>Jika ingin menambahkan basemap secara sekaligus, maka dapat menggunakan python
+script. Berikut contoh python script:
+<a href="https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py">Python Script</a></p>
+<p>Berikut merupakan cara memasukkan script tersebut:</p>
+<ol>
+<li>Copy text pada link tersebut.</li>
+<li>Buka QGIS. Klik pada bagian Plugins &gt; klik Python Console.</li>
+</ol>
+<figure><img src="https://greythroat1.github.io/blog/img/QGIS/basemap/Python_script-1.png"
+         alt="Python Script-1" width="400px"/>
+</figure>
+
+<ol start="3">
+<li>Console akan muncul pada bagian bawah, lalu paste semua text pada console.</li>
+</ol>
+<figure><img src="https://greythroat1.github.io/blog/img/QGIS/basemap/Python_script-2.png"
+         alt="Python Script-2" width="1000px"/>
+</figure>
+
+<ol start="4">
+<li>Tunggu sesaat. Setelah siap, maka akan muncul text <strong>iface.reloadConnections()</strong>,
+lalu tekan Enter pada keyboard atau tombol Run Command pada console tersebut.</li>
+</ol>
+<figure><img src="https://greythroat1.github.io/blog/img/QGIS/basemap/Python_script-3.png"
+         alt="Python Script-3" width="1000px"/>
+</figure>
+
+<ol start="5">
+<li>Restart QGIS. Layer akan muncul pada bagian XYZ Tiles.</li>
+</ol>
+<p>Layer pada script tersebut dapat diedit sesuai diinginkan. Oleh karena itu,
+kelebihan dengan menggunakan script yaitu kita dapat mengontrol atau mengatur
+layer apa saja yang akan dimasukkan pada QGIS dan juga dengan script akan lebih
+mudah untuk mengirim konfigurasi layer yang sama antara satu komputer dengan
+komputer lainnya.</p>
+<h2 id="menggunakan-plugin">Menggunakan Plugin</h2>
+<p>Cara lain untuk menambahkan layer yakni dengan menggunakan plugin. Dengan
+adanya plugin, menambahkan basemap menjadi lebih mudah. Terdapat beberapa
+plugin yang digunakan untuk menampilkan basemap, yang dijelaskan disini
+diantaranya yaitu <strong>QuickMapServices</strong> dan <strong>Tile+</strong></p>
+<h3 id="plugin-quickmapservices">Plugin QuickMapServices</h3>
+<p>Plugin yang sangat popular untuk menambahkan basemap yakni QuickMapServices.
+Berikut merupakan cara mengkonfigurasikannya.</p>
+<ol>
+<li>Klik pada bagian Plugins &gt; klik Manage and Install Plugins&hellip;.</li>
+</ol>
+<figure><img src="https://greythroat1.github.io/blog/img/QGIS/basemap/QuickMapServices-1.png"
+         alt="QuickMapServices-1" width="400px"/>
+</figure>
+
+<ol start="2">
+<li>
+<p>klik pada tombol pencarian dan cari QuickMapServices.
+Pastikan yang terpilih yaitu pada bagian All.</p>
+</li>
+<li>
+<p>Pilih plugin tersebut, lalu klik Install Plugin.</p>
+</li>
+</ol>
+<figure><img src="https://greythroat1.github.io/blog/img/QGIS/basemap/QuickMapServices-2.png"
+         alt="QuickMapServices-2" width="460px"/>
+</figure>
+
+<ol start="4">
+<li>Setelah terinstall, klik Web &gt; QuickMapServices &gt; pilih map yang diinginkan.</li>
+</ol>
+<figure><img src="https://greythroat1.github.io/blog/img/QGIS/basemap/QuickMapServices-3.png"
+         alt="QuickMapServices-3" width="340px"/>
+</figure>
+
+<ol start="5">
+<li>Pada instalasi pertama kali, basemap yang tersedia hanya sedikit, maka jika
+ingin mendapatkan layer seperti google satellite, bing map, dsb., maka pada
+QuickMapService dapat memilih Settings &gt; More services &gt; Get contributed pack.</li>
+</ol>
+<figure><img src="https://greythroat1.github.io/blog/img/QGIS/basemap/QuickMapServices-4.png"
+         alt="QuickMapServices-4" width="360px"/>
+</figure>
+
+<figure><img src="https://greythroat1.github.io/blog/img/QGIS/basemap/QuickMapServices-5.png"
+         alt="QuickMapServices-5" width="360px"/>
+</figure>
+
+<blockquote>
+<p>Pada plugin QuickMapServices dapat menambahkan basemap secara manual yakni
+pada QuickMapServices &gt; Settings &gt; Add\Edit\Remove lalu dapat menambahkan grup
+atau service(layer) secara manual.</p>
+</blockquote>
+<h3 id="plugin-tile">Plugin Tile+</h3>
+<p>Tile+ merupakan plugin yang lebih minimal/simpel yakni tidak memiliki banyak
+pengaturan seperti plugin sebelumnya. Plugin ini hanya dapat memilih peta
+kemudian menampilkannya pada aplikasi. Plugin ini tidak terdapat pada
+repository plugin QGIS, sehingga harus diinstal secara manual. Berikut
+link download plugin <a href="https://drive.google.com/file/d/1LMAb_SMYHBpZrDhFIkgxUHLE2hNVIirE/view"><em>Tile+</em></a>.</p>
+<p>Cara menginstall plugin tersebut yakni sebagai berikut:</p>
+<ol>
+<li>Download plugin tersebut dalam format .zip.</li>
+<li>Buka QGIS, klik pada bagian Plugins &gt; klik Manage and Install Plugins&hellip; &gt;
+klik Install from ZIP.</li>
+</ol>
+<figure><img src="https://greythroat1.github.io/blog/img/QGIS/basemap/Tileplus-1.png"
+         alt="Tileplus-1" width="460px"/>
+</figure>
+
+<ol start="3">
+<li>Klik tombol … (titik tiga) kemudian cari file zip yang telah didownload.</li>
+<li>Klik Install Plugin.</li>
+</ol>
+<figure><img src="https://greythroat1.github.io/blog/img/QGIS/basemap/Tileplus-2.png"
+         alt="Tileplus-2" width="200px"/>
+</figure>
+
+<ol start="5">
+<li>Jika muncul jendela <em>Security warning</em>, pilih yes.</li>
+</ol>
+<figure><img src="https://greythroat1.github.io/blog/img/QGIS/basemap/Tileplus-3.png"
+         alt="Tileplus-3" width="300px"/>
+</figure>
+
+<ol start="6">
+<li>Maka plugin akan langsung muncul pada bagian toolbar, jika tidak maka dapat
+dilihat pada bagian Plugins.</li>
+</ol>
+<p>Terdapat berbagai macam cara dalam menambahkan basemap pada QGIS, terserah pada
+pengguna bagaimana cara untuk memasukkannya pada aplikasi QGIS.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="https://greythroat1.github.io/blog/tags/qgis">qgis</a></li>
+					
+					<li><a href="https://greythroat1.github.io/blog/tags/tutorial">tutorial</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/greythroat1" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://www.linkedin.com/in/rafli-ahmad-nur-579a03249/" rel="me" title="Linkedin"><i data-feather="linkedin"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2023  © GreyThroat |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>
