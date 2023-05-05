@@ -117,7 +117,7 @@ Target CRS dan Output file.
 koordinat aslinya.  
 {{< figure src="/img/QGIS/georeference/Georeference2_81.png" alt="Georeference2-81" width="700px" >}}  
 
-## Kesimpulan  
+# Kesimpulan  
 
 Data raster dan vektor dapat dimasukkan kedalam GIS dengan melakukan proses 
 Georeference. Data yang akan dimasukkan harus memiliki koordinat, jika tidak 
